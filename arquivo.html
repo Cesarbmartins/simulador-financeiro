@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="simulador.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+      <h1 class="titulo">CTR</h1>
+    
+      <div class="in"></div>
+     Preço gasto nos ovos : <input type="text" id="in_preco"><br>
+     Quantidade de ovos : <input type="text" id="in_qtd"><br>
+     ovos que serão perdidos sem o controle: <input type="text" id="in_ovos"><br>
+
+      
+     <button onclick="reptil()">Calcular prejuizo</button>
+    
+    </div>
+    
+    <div class="uau" id="div_ovos"></div>
+</body>
+</html>
+<script>
+    function reptil(){
+              
+        var inv=Number(in_preco.value)
+        var qtd=Number(in_qtd.value)
+       var ovo=Number(in_ovos.value)
+       var preju=(inv*ovo/qtd)
+
+       div_ovos.innerHTML=`O seu prejuízo é de ${preju}!!!`
+    }
+</script>
